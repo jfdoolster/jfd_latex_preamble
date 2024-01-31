@@ -10,7 +10,7 @@ git clone https://github.com/jfdoolster/jfd_latex_preamble.git preamble
 Can also be added as a submodule inside a git repository.
 ```bash
 git submodule init
-git submodule add https://github.com/jfdoolster/jfd_latex_preamble.git preamble
+git submodule add -b main https://github.com/jfdoolster/jfd_latex_preamble.git preamble
 git submodule update --recursive
 ```
 
