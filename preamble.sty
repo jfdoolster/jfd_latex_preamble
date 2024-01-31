@@ -1,0 +1,82 @@
+\usepackage[english]{babel}%
+\usepackage[autostyle,english=american]{csquotes}%
+% LTeX: enabled=false
+\MakeOuterQuote{"}%
+% LTeX: enabled=true
+
+\usepackage{lipsum}
+\usepackage{pdfpages}
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks = true,
+  linkcolor  = blue,
+  urlcolor   = blue,
+  filecolor  = blue,
+  citecolor  = black,
+}
+
+\usepackage{amsmath, amssymb}
+
+% units and math
+\providecommand{\Units}[1]{\,\text{#1}\,}
+\providecommand{\Degrees}[1]{\ensuremath{{#1}^{\circ}}}
+\providecommand{\Pow}[1]{\text{\textsuperscript{#1}}}
+\providecommand{\Sim}{\text{\raisebox{0.5ex}{\texttildelow}}}
+\providecommand{\Micro}{\ensuremath{\mu}}
+
+% scientific notation
+\providecommand{\e}[1]{\ensuremath{\times 10^{#1}}}
+\providecommand{\E}[1]{\ensuremath{\text{{\scriptsize\,E\,}{#1}}}}
+
+% consistent latin
+\providecommand{\EtAl}{\latin{et\,al.}}
+\providecommand{\APriori}{\latin{a priori}}
+\providecommand{\InSitu}{\latin{in situ}}
+
+% compound shortcuts
+\providecommand{\Methane}{\text{CH\textsubscript{4}}}
+\providecommand{\Ethane}{\text{C\textsubscript{2}H\textsubscript{6}}}
+\providecommand{\CarbonDioxide}{\text{CO\textsubscript{2}}}
+\providecommand{\ONG}{\text{O\&NG}}
+\providecommand{\Placeholder}{\text{\textbf{XX}}}
+
+\usepackage{titlesec}
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{4}
+
+\usepackage{xcolor}
+\definecolor{codeGreen}{rgb}{0,0.6,0}
+\definecolor{codeGray}{rgb}{0.5,0.5,0.5}
+\definecolor{codePurple}{rgb}{0.58,0,0.82}
+\definecolor{codeBackground}{rgb}{0.95,0.95,0.92}
+
+\usepackage{listings}
+% LTeX: enabled=false
+\lstset{
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,
+    breaklines=true,
+    captionpos=b,
+    keepspaces=true,
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    tabsize=2,
+    numbers=left,
+    numbersep=0.5em,
+    backgroundcolor=\color{codeBackground},
+    commentstyle=\color{codeGreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codeGray},
+    stringstyle=\color{codePurple},
+    upquote=true
+}
+% LTeX: enabled=true
+
+\usepackage{tcolorbox}
+% Question prompt boxes with less keystrokes
+\newcommand{\Prompt}[1]{\begin{center}%
+    \begin{tcolorbox}[standard jigsaw,opacityback=0,width=0.8\textwidth]%
+        \scriptsize #1 %
+    \end{tcolorbox}%
+\end{center}}
